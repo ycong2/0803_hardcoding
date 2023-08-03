@@ -1,0 +1,62 @@
+body{
+    font-family: 'Montserrat','Noto Sans KR', sans-serif;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing:-0.085em;
+    color:#222;
+    height: 3000px;
+    a{
+        color: #222;
+        text-decoration: none;
+    }
+}
+#hd{
+    position: fixed; top:0; left:0; right:0; z-index:1000;
+    max-width: 1280px;
+    padding:0 15px;
+    margin: 0 auto;
+    background-color: #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1{
+        a{
+            img{
+                height: 4rem;
+            }
+        }
+    }
+}
+#gnb{
+    display:flex;
+    li{
+       padding:0 15px; 
+        a{
+
+        }
+        &:before{
+            // 스타일로 생성되는 객체- 가상선택자
+            // 페이지 소스보기로는 확인불가/요소검사로만 확인가능
+            content:"";
+            // 가상선택자는 인라인타입
+            display:block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            margin: 0 auto;
+            transform: translateY(200%);
+            opacity: 0;
+            transition: 0.5s;
+        }
+        &:hover:before{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        &:hover{
+            a{
+                color: red;
+            }
+        }
+    }
+}

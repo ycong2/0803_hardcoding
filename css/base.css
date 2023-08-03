@@ -1,0 +1,67 @@
+body {
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: -0.085em;
+  color: #222;
+  height: 3000px;
+}
+body a {
+  color: #222;
+  text-decoration: none;
+}
+
+#hd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto;
+  background-color: #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#hd h1 a img {
+  height: 4rem;
+}
+
+#gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#gnb li {
+  padding: 0 15px;
+}
+#gnb li:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  margin: 0 auto;
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+#gnb li:hover:before {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+#gnb li:hover a {
+  color: red;
+}/*# sourceMappingURL=base.css.map */
